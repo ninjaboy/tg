@@ -96,6 +96,7 @@
 #include <errno.h>
 
 #include "tgl/tree.h"
+#include "tools.h"
 
 struct username_peer_pair {
   const char *username;
@@ -2551,6 +2552,9 @@ void print_filename_gw (struct tgl_state *TLSR, void *extra, int success, const 
   mprint_start (ev);
   if (!enable_json) {
     mprintf (ev, "Saved to %s\n", name);
+    // #ifdef AUTO_ITERM_IMGCAT
+    print_iterm_image(name);
+    // #endif
   } else {
     #ifdef USE_JSON
       json_t *res = json_object ();
