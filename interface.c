@@ -96,7 +96,7 @@
 #include <errno.h>
 
 #include "tgl/tree.h"
-#include "tools.h"
+#include "imgcat_tools.h"
 
 struct username_peer_pair {
   const char *username;

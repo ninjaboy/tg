@@ -20,7 +20,9 @@
 #ifndef PRINT_IMAGE_H
 #define PRINT_IMAGE_H
 
+#include <stdbool.h>
+
 /* Prints the image. Returns true when successful. */
-void print_iterm_image(const char * filename);
+void print_iterm_image(const char *filename);
 
 #endif /* PRINT_IMAGE_H */

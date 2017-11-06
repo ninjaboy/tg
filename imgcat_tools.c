@@ -23,29 +23,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-//#include "tools.h"
-
-typedef const unsigned char Pixel;
-typedef void (*PixelFunc)(Pixel *pixel);
+#include "imgcat_tools.h"
 
 static bool iterm2_passthrough(const char *filename);
 static bool print_base64(const char *filename);
 static void print_osc();
 static void print_st();
-static void printer_256_color(Pixel *pixel);
-static void printer_8_color(Pixel *pixel);
-
-/* The 8 color table. It has 8 colors. */
-static const RGB_Tuple ansi_color_table[] = {
-    {{  0,   0,   0}}, {{ 128,   0,   0}},
-    {{  0, 128,   0}}, {{ 128, 128,   0}},
-    {{  0,   0, 128}}, {{ 128,   0, 128}},
-    {{  0, 128, 128}}, {{ 128, 128, 128}},
-};
-
 
 void print_iterm_image(const char * filename) {
-        return iterm2_passthrough(filename);
+     iterm2_passthrough(filename);
 }
 
 /**
